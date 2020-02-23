@@ -1,0 +1,1 @@
+print("If you import the aa module,then the system will execute the content of  __init__py")
