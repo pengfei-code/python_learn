@@ -112,6 +112,10 @@ test_mutable_para(20,30)
 def test_mutable_para1(a,b,**c):
     print("c is ",c)
 
+#单一 一个*c后不能再跟单一*变量
+#双结  两个*后面不能跟任何变量
+
+
 #dd = dict(name = "songpengfei",age = 20) error
 
 #* 变量可以接受一个字典变量  但是**c 虽然是一个字典变量 但是不能接受
