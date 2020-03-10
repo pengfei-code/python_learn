@@ -108,6 +108,8 @@ class Person:
         #通过 self.high 或者类外部调用 per1.high 这个都是实例属性 但是通过Person.high 属于类属性 实例属性和类属性名字可以一样是不相干的
         #但是java 里的类属性和实例属性不能重名
         
+        #如果你想要调用以self开始的ordinary方法 可以通过 对象.  或者 类.方法（对象（self））
+        
 
 per1 = Person("song",25)
 
