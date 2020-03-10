@@ -85,9 +85,7 @@ c.get_car_info();
 
 #Class Object 类对象
 
-# 和Java不同的是类属性是专属于类的  类其实也是一个对象  所以 和java static 不同的是
-#java中其他对象改变了static  属性值之后 其它的对象也改变
-#而这个是互不干扰的，你可以理解为每一个对象里面都包含了共同类对象！
+
 
 class Person:
     #类属性
