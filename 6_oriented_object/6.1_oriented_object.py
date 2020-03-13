@@ -9,6 +9,7 @@
 #在python中类也是对象 一切都是对象  然后就是python的类可以看成是一个模具
 class Student:
     sex =""
+    #self start
     def __init__(self,name,age,d):
         self.name = name
         self.age = age
@@ -84,9 +85,7 @@ c.get_car_info();
 
 #Class Object 类对象
 
-# 和Java不同的是类属性是专属于类的  类其实也是一个对象  所以 和java static 不同的是
-#java中其他对象改变了static  属性值之后 其它的对象也改变
-#而这个是互不干扰的，你可以理解为每一个对象里面都包含了共同类对象！
+
 
 class Person:
     #类属性
@@ -95,13 +94,22 @@ class Person:
     def __init__(self,name,age):
         self.name = name
         self.age = age
+        #self 可以调用所有方法 包括非类方法 类方法 和静态方法
     def print_info(self):
         print("name is {0} and the age is {1},and the high is {2}".format(self.name,self.age,self.high))
     @classmethod
     def print_high(cls,*d):
         print("the high of class is {0}".format(cls.high))
-        #cls.print_info() 这是错误的 因为类对象不能调用类方法
-        #也不能用self
+        
+        #cls.print_info() 这是错误的 因为类对象只能调用类方法和静态方法 in other words the method of static can be called by anyobj
+        #在类方法里面不能用self in other words if the method is ordinary method (It's  first argument is self) then you can use the 
+        #self
+        #In static method or class method ,they can mutually call itself except ordinary method
+        #通过 self.high 或者类外部调用 per1.high 这个都是实例属性 但是通过Person.high 属于类属性 实例属性和类属性名字可以一样是不相干的
+        #但是java 里的类属性和实例属性不能重名
+        
+        #如果你想要调用以self开始的ordinary方法 可以通过 对象.  或者 类.方法（对象（self））
+        
 
 per1 = Person("song",25)
 
