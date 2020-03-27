@@ -106,13 +106,9 @@ stu = Student()
 stu.instance_method()
 
 
-#   对象调用类方法会出错
 
-stu.static_method("b")
 
-# stu.class_method(Student)
-
-#由类来调用类方法和静态方法
+#由类来调用类方法和静态方法 对象调用没有问题
 
 Student.class_method()
 Student.static_method("hehe")
