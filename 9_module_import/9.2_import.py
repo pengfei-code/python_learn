@@ -1,7 +1,10 @@
+
+
 #1
 import math as m
 
 #2
+#notice the module name can not be the 
 
 # from math import *
 
