@@ -17,3 +17,14 @@ d = -25
 print(c is d)
 print(c ==d)
 
+#the following  example 
+# the id of a  is diffrent from id of b 
+a = "ss"
+b= ["s","s"]
+b = "".join(b)
+
+print(id(a))
+print(id(b))
+print(a == b)
+print(a is b)
+
