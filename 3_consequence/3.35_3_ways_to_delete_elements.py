@@ -16,7 +16,7 @@ b = a.pop(1)
 print(a)
 
 
-#remove
+#remove  if the list contains multiple element  then the method of remove will remove the first element and retain others
 a.extend(["a","b","c"]*3)
 a.remove("a")
 print(a)
