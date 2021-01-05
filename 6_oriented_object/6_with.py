@@ -1,24 +1,17 @@
-# In the with block
-#1： for instance ： with objcet | method ：
-#                       pass
-
-#2：the object you must override the method of __enter__ and the block in with
-# and It will be execute the obj's __enter__ and then execute the obj's __exit__ finally
-#the obj's __exit__
-
-#3 if you use like this with method : and the method must return the object implemented the
-#__enter__ and the __exit__
-
+#the usage of with
+#
 
 
 
 class WithTest:
     def __enter__(self):
         print("enter")
-        return self
+        return self# the object behind as （object）
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         print("exit")
+        return true  # if you return the true ,if the code contains exception then the system will not throw the exception else throw the exception
+    
     def print_info(self):
         print("withtest")
 
@@ -29,6 +22,7 @@ with wt :
 
 def with_method():
     print("with_method")
+    print(1/0)
     return wt
 
 with with_method() :
