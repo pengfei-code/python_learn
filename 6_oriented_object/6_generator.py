@@ -23,7 +23,7 @@ def fibonacci():
         b = c
         yield c
     print("after yield")
-    # raise StopIteration
+    
 
 
 
